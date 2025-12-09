@@ -241,10 +241,10 @@ function App() {
                 </div>
                 <div className="terminal-body">
                   <pre><code><span className="code-import">import</span> <span className="code-bracket">{'{'}</span> init <span className="code-bracket">{'}'}</span> <span className="code-import">from</span> <span className="code-string">"console-text"</span>;
-
-                    <span className="code-function">init</span>(<span className="code-bracket">{'{'}</span> <span className="code-property">apiKey</span>: <span className="code-string">"YOUR_API_KEY"</span> <span className="code-bracket">{'}'}</span>);
-
-                    <span className="code-console">console</span>.<span className="code-function">text</span>(<span className="code-string">"Checkout broke"</span>);</code></pre>
+{'\n'}
+<span className="code-function">init</span>(<span className="code-bracket">{'{'}</span> <span className="code-property">apiKey</span>: <span className="code-string">"YOUR_API_KEY"</span> <span className="code-bracket">{'}'}</span>);
+{'\n'}
+<span className="code-console">console</span>.<span className="code-function">text</span>(<span className="code-string">"Checkout broke"</span>);</code></pre>
                 </div>
               </div>
             </div>
