@@ -221,10 +221,10 @@ function App() {
 
             <div className="cta-buttons">
               <div className="btn-wrapper">
-                <button className="btn-secondary">See How It Works</button>
+                <button className="btn-secondary" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</button>
               </div>
               <div className="btn-wrapper">
-                <button className="btn-primary">Get Your API Key</button>
+                <button className="btn-primary" onClick={openAuthModal}>Get Your API Key</button>
               </div>
             </div>
 
