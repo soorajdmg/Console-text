@@ -356,6 +356,22 @@ body {
   color: var(--text-primary);
 }
 
+.auth-error {
+  background: rgba(255, 95, 86, 0.1);
+  border: 1px solid #ff5f56;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #ff5f56;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.btn-primary-nav:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Section Dividers */
 .section-divider {
   position: relative;
@@ -821,6 +837,107 @@ body {
   letter-spacing: 0.5px;
 }
 
+/* API Keys Display */
+.api-keys-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.api-key-box {
+  background: var(--medium-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.api-key-box:hover {
+  border-color: var(--electric-blue);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+}
+
+.api-key-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.key-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.key-badge.live {
+  background: rgba(39, 201, 63, 0.2);
+  color: #27c93f;
+  border: 1px solid #27c93f;
+}
+
+.key-badge.test {
+  background: rgba(255, 189, 46, 0.2);
+  color: #ffbd2e;
+  border: 1px solid #ffbd2e;
+}
+
+.key-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.api-key-value {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--dark-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.api-key-value code {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--electric-blue);
+  letter-spacing: 0.5px;
+  word-break: break-all;
+}
+
+.btn-copy {
+  background: var(--electric-blue);
+  color: var(--darkest-grey);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.btn-copy:hover {
+  background: var(--text-primary);
+  box-shadow: 0 0 15px var(--electric-blue-glow);
+}
+
+.btn-copy:active {
+  transform: scale(0.95);
+}
+
 /* Footer */
 .footer {
   padding: 60px 0 40px;
@@ -988,6 +1105,23 @@ body {
 
   .nav-menu-expanded a {
     font-size: 24px;
+  }
+
+  .api-keys-container {
+    max-width: 100%;
+  }
+
+  .api-key-value {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .api-key-value code {
+    font-size: 11px;
+  }
+
+  .btn-copy {
+    width: 100%;
   }
 }
 
