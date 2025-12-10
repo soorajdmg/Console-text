@@ -161,10 +161,16 @@ function App() {
 
           {menuOpen && !showAuthModal && (
             <div className="nav-menu-expanded">
-              <a href="#how-it-works" onClick={toggleMenu}>How It Works</a>
-              <a href="#use-cases" onClick={toggleMenu}>Use Cases</a>
-              <a href="#pricing" onClick={toggleMenu}>Pricing</a>
-              <a href="/docs" onClick={toggleMenu}>Docs</a>
+              <a
+                href="#api-keys"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleMenu();
+                  finalCtaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+              >
+                Get API Keys
+              </a>
             </div>
           )}
 
@@ -231,9 +237,6 @@ function App() {
             </p>
 
             <div className="cta-buttons">
-              <div className="btn-wrapper">
-                <button className="btn-secondary" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</button>
-              </div>
               <div className="btn-wrapper">
                 <button className="btn-primary" onClick={openAuthModal}>Get Your API Key</button>
               </div>

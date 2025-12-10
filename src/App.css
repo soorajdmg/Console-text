@@ -824,6 +824,7 @@ body {
 /* Final CTA */
 .final-cta {
   padding: 20px 0;
+  scroll-margin-top: 100px;
 }
 
 .cta-content {
