@@ -1,8 +1,8 @@
 .use-cases-wheel-section {
   padding: 0;
   position: relative;
-  width: calc(100% + 120px);
-  left: -60px;
+  width: 100%;
+  left: 0;
   margin-left: 0;
 }
 
@@ -153,5 +153,28 @@
 
   .wheel-item-text {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wheel-content {
+    padding: 24px 16px;
+    gap: 32px;
+  }
+
+  .wheel-headline h2 {
+    font-size: 28px;
+  }
+
+  .wheel-items {
+    gap: 8px 16px;
+  }
+
+  .wheel-item {
+    padding: 8px 0;
+  }
+
+  .wheel-item-text {
+    font-size: 13px;
   }
 }
