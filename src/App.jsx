@@ -455,6 +455,42 @@ function App() {
           <div className="divider-plus right-plus">+</div>
         </div>
 
+        {/* Important Info Section */}
+        <section className="info-section">
+          <div className="info-cards">
+            <div className="info-card">
+              <div className="info-icon">📱</div>
+              <h3 className="info-title">SMS Delivery</h3>
+              <p className="info-description">
+                Alerts are sent to the phone number you provide during signup. Make sure it's a number you can access.
+              </p>
+            </div>
+
+            <div className="info-card">
+              <div className="info-icon">⚡</div>
+              <h3 className="info-title">Rate Limits</h3>
+              <p className="info-description">
+                10 identical messages per minute • 50 total messages per account
+              </p>
+            </div>
+
+            <div className="info-card">
+              <div className="info-icon">🔒</div>
+              <h3 className="info-title">Free Forever</h3>
+              <p className="info-description">
+                No credit card required. Start alerting in 30 seconds with your free account.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="section-divider">
+          <div className="divider-line"></div>
+          <div className="divider-plus left-plus">+</div>
+          <div className="divider-plus right-plus">+</div>
+        </div>
+
         {/* Final CTA Section */}
         <section className="final-cta" ref={finalCtaRef}>
           <div className="cta-content">
