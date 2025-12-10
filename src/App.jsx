@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
-import UseCasesWheel from './components/UseCasesWheel';
 import { authService } from './services/api';
 
 function App() {
@@ -8,6 +7,7 @@ function App() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [apiKeys, setApiKeys] = useState({ liveKey: '', testKey: '' });
+  const [copiedKey, setCopiedKey] = useState(null); // 'live' or 'test'
 
   // Form states
   const [email, setEmail] = useState('');
@@ -40,6 +40,16 @@ function App() {
     setMenuOpen(false);
     setShowAuthModal(false);
     setError('');
+  };
+
+  const handleCopyKey = async (key, keyType) => {
+    try {
+      await navigator.clipboard.writeText(key);
+      setCopiedKey(keyType);
+      setTimeout(() => setCopiedKey(null), 2000); // Reset after 2 seconds
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
   };
 
   const handleAuthSubmit = async (e) => {
@@ -189,6 +199,7 @@ function App() {
                     disabled={isLoading}
                     required
                   />
+                  <small className="form-helper-text">We'll send error alerts to this number via SMS</small>
                 </div>
                 <div className="btn-wrapper">
                   <button type="submit" className="btn-primary-nav" disabled={isLoading}>
@@ -240,110 +251,13 @@ function App() {
                   <div className="terminal-spacer"></div>
                 </div>
                 <div className="terminal-body">
-                  <pre><code><span className="code-import">import</span> <span className="code-bracket">{'{'}</span> init <span className="code-bracket">{'}'}</span> <span className="code-import">from</span> <span className="code-string">"console-text"</span>;
+                  <pre><code><span className="code-import">import</span> <span className="code-bracket">{'{'}</span> init <span className="code-bracket">{'}'}</span> <span className="code-import">from</span> <span className="code-string">"@holler2660/console-text"</span>;
 {'\n'}
 <span className="code-function">init</span>(<span className="code-bracket">{'{'}</span> <span className="code-property">apiKey</span>: <span className="code-string">"YOUR_API_KEY"</span> <span className="code-bracket">{'}'}</span>);
 {'\n'}
 <span className="code-console">console</span>.<span className="code-function">text</span>(<span className="code-string">"Checkout broke"</span>);</code></pre>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="section-divider">
-          <div className="divider-line"></div>
-          <div className="divider-plus left-plus">+</div>
-          <div className="divider-plus right-plus">+</div>
-        </div>
-
-        {/* How It Works Section */}
-        <section id="how-it-works" className="how-it-works">
-          <h2 className="section-title">
-            <span className="title-line"></span>
-            How It Works
-            <span className="title-line"></span>
-          </h2>
-          <div className="steps">
-            <div className="step">
-              <div className="step-number">01</div>
-              <div className="step-content">
-                <h3>Sign up and get your API key</h3>
-                <p>Takes 10 seconds. No credit card required.</p>
-              </div>
-            </div>
-
-            <div className="step-divider"></div>
-
-            <div className="step">
-              <div className="step-number">02</div>
-              <div className="step-content">
-                <h3>Add one line to your code</h3>
-                <p>Initialize console-text with your API key.</p>
-              </div>
-            </div>
-
-            <div className="step-divider"></div>
-
-            <div className="step">
-              <div className="step-number">03</div>
-              <div className="step-content">
-                <h3>Receive instant error notifications</h3>
-                <p>Get alerted the moment something breaks.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="section-divider" id='section-divider-usecase'>
-          <div className="divider-line"></div>
-          <div className="divider-plus left-plus">+</div>
-          <div className="divider-plus right-plus">+</div>
-        </div>
-
-        {/* Use Cases Section */}
-        <UseCasesWheel />
-
-        {/* Section Divider */}
-        <div className="section-divider" id='section-divider-why'>
-          <div className="divider-line"></div>
-          <div className="divider-plus left-plus">+</div>
-          <div className="divider-plus right-plus">+</div>
-        </div>
-
-        {/* Why Console-Text Section */}
-        <section className="why-section">
-          <h2 className="section-title">
-            <span className="title-line"></span>
-            Why console-text?
-            <span className="title-line"></span>
-          </h2>
-          <div className="why-grid">
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>Ultra-fast alerting</span>
-            </div>
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>No dashboards</span>
-            </div>
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>No configuration</span>
-            </div>
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>Zero learning curve</span>
-            </div>
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>Works in any backend</span>
-            </div>
-            <div className="why-item">
-              <span className="check-mark">✓</span>
-              <span>Solves real developer pain</span>
             </div>
           </div>
         </section>
@@ -373,40 +287,56 @@ function App() {
                 <h2 className="cta-title">Your API Keys</h2>
                 <p className="cta-subtext" style={{ marginBottom: '32px' }}>Use these keys to integrate console-text into your application</p>
 
-                <div className="api-keys-container">
-                  <div className="api-key-box">
-                    <div className="api-key-label">
-                      <span className="key-badge live">LIVE</span>
-                      <span className="key-title">Production Key</span>
+                <div className="api-dashboard">
+                  <div className="api-keys-container">
+                    <div className="api-key-box">
+                      <div className="api-key-label">
+                        <span className="key-badge live">LIVE</span>
+                        <span className="key-title">Production Key</span>
+                      </div>
+                      <div className="api-key-value">
+                        <code>{apiKeys.liveKey || 'No key available'}</code>
+                        <button
+                          className="btn-copy"
+                          onClick={() => handleCopyKey(apiKeys.liveKey, 'live')}
+                          title="Copy to clipboard"
+                          disabled={!apiKeys.liveKey}
+                        >
+                          {copiedKey === 'live' ? '✓ Copied' : 'Copy'}
+                        </button>
+                      </div>
                     </div>
-                    <div className="api-key-value">
-                      <code>{apiKeys.liveKey || 'No key available'}</code>
-                      <button
-                        className="btn-copy"
-                        onClick={() => navigator.clipboard.writeText(apiKeys.liveKey)}
-                        title="Copy to clipboard"
-                        disabled={!apiKeys.liveKey}
-                      >
-                        Copy
-                      </button>
+
+                    <div className="api-key-box">
+                      <div className="api-key-label">
+                        <span className="key-badge test">TEST</span>
+                        <span className="key-title">Development Key</span>
+                      </div>
+                      <div className="api-key-value">
+                        <code>{apiKeys.testKey || 'No key available'}</code>
+                        <button
+                          className="btn-copy"
+                          onClick={() => handleCopyKey(apiKeys.testKey, 'test')}
+                          title="Copy to clipboard"
+                          disabled={!apiKeys.testKey}
+                        >
+                          {copiedKey === 'test' ? '✓ Copied' : 'Copy'}
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="api-key-box">
-                    <div className="api-key-label">
-                      <span className="key-badge test">TEST</span>
-                      <span className="key-title">Development Key</span>
-                    </div>
-                    <div className="api-key-value">
-                      <code>{apiKeys.testKey || 'No key available'}</code>
-                      <button
-                        className="btn-copy"
-                        onClick={() => navigator.clipboard.writeText(apiKeys.testKey)}
-                        title="Copy to clipboard"
-                        disabled={!apiKeys.testKey}
-                      >
-                        Copy
-                      </button>
+                  <div className="rate-limit-info">
+                    <h3 className="rate-limit-title">Rate Limits</h3>
+                    <div className="rate-limit-details">
+                      <div className="rate-limit-item">
+                        <span className="rate-limit-label">Per API Key:</span>
+                        <span className="rate-limit-value">10 messages/minute</span>
+                      </div>
+                      <div className="rate-limit-item">
+                        <span className="rate-limit-label">Per Account:</span>
+                        <span className="rate-limit-value">50 messages total across all keys</span>
+                      </div>
                     </div>
                   </div>
                 </div>

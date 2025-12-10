@@ -330,6 +330,14 @@ body {
   color: var(--text-muted);
 }
 
+.form-helper-text {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: -4px;
+}
+
 .auth-form .btn-wrapper {
   align-self: center;
   width: auto;
@@ -815,7 +823,7 @@ body {
 
 /* Final CTA */
 .final-cta {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .cta-content {
@@ -838,12 +846,19 @@ body {
 }
 
 /* API Keys Display */
+.api-dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 400px;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .api-keys-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 700px;
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -936,6 +951,59 @@ body {
 
 .btn-copy:active {
   transform: scale(0.95);
+}
+
+.btn-copy:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Rate Limit Info */
+.rate-limit-info {
+  padding: 24px;
+  background: var(--light-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.rate-limit-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.rate-limit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rate-limit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grid-line);
+}
+
+.rate-limit-item:last-child {
+  border-bottom: none;
+}
+
+.rate-limit-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rate-limit-value {
+  color: var(--electric-blue);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* Footer */
@@ -1105,6 +1173,11 @@ body {
 
   .nav-menu-expanded a {
     font-size: 24px;
+  }
+
+  .api-dashboard {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .api-keys-container {
