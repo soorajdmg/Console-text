@@ -329,11 +329,11 @@ function App() {
         </nav>
 
         {/* Navbar Divider */}
-        {/* <div className="section-divider">
+        <div className="section-divider">
           <div className="divider-line"></div>
           <div className="divider-plus left-plus">+</div>
           <div className="divider-plus right-plus">+</div>
-        </div> */}
+        </div>
 
         {/* Hero Section */}
         <section className="hero">
