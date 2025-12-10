@@ -18,8 +18,8 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--darkest-grey);
@@ -132,7 +132,8 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: var(--electric-blue);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   letter-spacing: -0.5px;
 }
 
@@ -233,7 +234,7 @@ body {
 }
 
 .nav-menu-expanded a::before {
-  content: '›';
+  content: "›";
   position: absolute;
   left: -20px;
   color: var(--electric-blue);
@@ -427,7 +428,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
+  /* padding: 120px 0 80px; */
   min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
@@ -559,7 +560,7 @@ body {
 .terminal-title {
   color: var(--text-muted);
   font-size: 12px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .terminal-spacer {
@@ -568,7 +569,7 @@ body {
 
 .terminal-body {
   padding: 24px;
-  font-family: 'Courier New', 'Monaco', monospace;
+  font-family: "Courier New", "Monaco", monospace;
   font-size: 14px;
   line-height: 1.8;
 }
@@ -608,6 +609,34 @@ body {
 .demo-action {
   text-align: center;
   margin: 32px 0;
+}
+
+/* Video Demo */
+.video-demo {
+  margin-top: 60px;
+}
+
+.video-wrapper-single {
+  position: relative;
+  background: var(--dark-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-wrapper-single:hover {
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.demo-video-single {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--darkest-grey);
 }
 
 .btn-test {
@@ -688,13 +717,13 @@ body {
   font-size: 16px;
   margin-bottom: 4px;
   color: var(--text-primary);
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .alert-time {
   color: var(--text-muted);
   font-size: 12px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 /* Section Titles */
@@ -714,8 +743,145 @@ body {
 .title-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--electric-blue),
+    transparent
+  );
   max-width: 100px;
+}
+
+/* Get Started Section */
+.get-started {
+  padding: 100px 0;
+}
+
+.section-title-main {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.section-title-main::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--electric-blue);
+  margin: 24px auto 0;
+  border-radius: 2px;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: var(--medium-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 12px;
+  padding: 40px 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-card:hover {
+  border-color: var(--electric-blue);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.step-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+/* Code snippet in step 1 */
+.code-snippet {
+  background: var(--dark-grey);
+  border: 1px solid var(--grid-line);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.code-snippet code {
+  flex: 1;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: var(--electric-blue);
+  letter-spacing: 0.5px;
+}
+
+.btn-copy-inline {
+  background: var(--electric-blue);
+  color: var(--darkest-grey);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn-copy-inline:hover {
+  background: var(--text-primary);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Step 2 specific */
+.step-card .btn-wrapper {
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.step-card .btn-primary {
+  width: auto;
+}
+
+/* Step 3 terminal reuses existing .terminal styles */
+.step-card .terminal {
+  margin-top: 16px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.step-card .terminal-body {
+  font-size: 13px;
+  padding: 20px;
 }
 
 /* How It Works */
@@ -747,7 +913,7 @@ body {
   justify-content: center;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   transition: all 0.3s ease;
 }
 
@@ -924,7 +1090,7 @@ body {
 
 .api-key-value code {
   flex: 1;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 13px;
   color: var(--electric-blue);
   letter-spacing: 0.5px;
@@ -1048,7 +1214,8 @@ body {
   font-weight: 700;
   color: var(--electric-blue);
   margin-bottom: 12px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   letter-spacing: -0.5px;
 }
 
@@ -1198,6 +1365,22 @@ body {
   .btn-copy {
     width: 100%;
   }
+
+  /* Get Started Mobile */
+  .section-title-main {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 600px;
+  }
+
+  .step-title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1212,5 +1395,23 @@ body {
 
   .cta-title {
     font-size: 28px;
+  }
+
+  /* Get Started Extra Small Screens */
+  .section-title-main {
+    font-size: 28px;
+  }
+
+  .step-card {
+    padding: 24px 20px;
+  }
+
+  .code-snippet {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-copy-inline {
+    width: 100%;
   }
 }
