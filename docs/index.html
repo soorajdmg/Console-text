@@ -1,9 +1,1843 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-44xb4kzv> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.16.5"><!-- SEO Meta Tags --><title>Documentation - console.text()</title><meta name="description" content="Complete documentation for console.text() - Send SMS alerts from your code in one line."><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/docs.Br0_Z6ge.css">
-<style>[data-astro-cid-44xb4kzv]::-webkit-scrollbar{width:10px}[data-astro-cid-44xb4kzv]::-webkit-scrollbar-track{background:#f1f5f9}[data-astro-cid-44xb4kzv]::-webkit-scrollbar-thumb{background:#64748b;border-radius:5px}[data-astro-cid-44xb4kzv]::-webkit-scrollbar-thumb:hover{background:#475569}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,sans-serif}code[data-astro-cid-44xb4kzv],pre[data-astro-cid-44xb4kzv],.font-mono[data-astro-cid-44xb4kzv]{font-family:Fira Code,Consolas,monospace}
-</style></head> <body class="font-sans antialiased bg-white text-slate-900" data-astro-cid-44xb4kzv> <!-- Navigation --> <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50" data-astro-cid-44xb4kzv> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-astro-cid-44xb4kzv> <div class="flex items-center justify-between h-16" data-astro-cid-44xb4kzv> <div class="flex items-center" data-astro-cid-44xb4kzv> <a href="/" class="text-2xl font-bold text-slate-900" data-astro-cid-44xb4kzv> <span class="font-mono" data-astro-cid-44xb4kzv>console.text()</span> </a> </div> <div class="hidden md:flex items-center space-x-8" data-astro-cid-44xb4kzv> <a href="/docs" class="text-indigo-600 font-semibold" data-astro-cid-44xb4kzv>Docs</a> <a href="/#pricing" class="text-slate-600 hover:text-slate-900 transition-colors" data-astro-cid-44xb4kzv>Pricing</a> <a href="/#use-cases" class="text-slate-600 hover:text-slate-900 transition-colors" data-astro-cid-44xb4kzv>Use Cases</a> <a href="/#try-now" class="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors" data-astro-cid-44xb4kzv>
-Get Started
-</a> </div> </div> </div> </nav> <!-- Documentation Content --> <main class="pt-24 pb-16" data-astro-cid-44xb4kzv> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" data-astro-cid-44xb4kzv> <!-- Page Header --> <div class="mb-12" data-astro-cid-44xb4kzv> <h1 class="text-5xl font-bold text-slate-900 mb-4" data-astro-cid-44xb4kzv>Documentation</h1> <p class="text-xl text-slate-600" data-astro-cid-44xb4kzv>Everything you need to integrate console.text() in 30 seconds.</p> </div> <!-- Quick Navigation --> <div class="bg-slate-50 rounded-xl p-6 mb-12" data-astro-cid-44xb4kzv> <h3 class="font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>On this page</h3> <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv> <li data-astro-cid-44xb4kzv><a href="#quick-start" class="text-indigo-600 hover:text-indigo-700" data-astro-cid-44xb4kzv>Quick Start</a></li> <li data-astro-cid-44xb4kzv><a href="#api-reference" class="text-indigo-600 hover:text-indigo-700" data-astro-cid-44xb4kzv>API Reference</a></li> <li data-astro-cid-44xb4kzv><a href="#examples" class="text-indigo-600 hover:text-indigo-700" data-astro-cid-44xb4kzv>Usage Examples</a></li> <li data-astro-cid-44xb4kzv><a href="#troubleshooting" class="text-indigo-600 hover:text-indigo-700" data-astro-cid-44xb4kzv>Troubleshooting</a></li> </ul> </div> <!-- Quick Start --> <section id="quick-start" class="mb-16" data-astro-cid-44xb4kzv> <h2 class="text-3xl font-bold text-slate-900 mb-6" data-astro-cid-44xb4kzv>Quick Start</h2> <div class="prose prose-slate max-w-none" data-astro-cid-44xb4kzv> <p class="text-lg text-slate-700 mb-6" data-astro-cid-44xb4kzv>Get your first SMS alert working in 30 seconds.</p> <h3 class="text-xl font-semibold text-slate-900 mb-4" data-astro-cid-44xb4kzv>1. Get your API key</h3> <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>Visit the <a href="/#try-now" class="text-indigo-600 hover:text-indigo-700" data-astro-cid-44xb4kzv>homepage</a> and enter your email and phone number to generate your API keys instantly.</p> <h3 class="text-xl font-semibold text-slate-900 mb-4 mt-8" data-astro-cid-44xb4kzv>2. Install the package</h3> <div class="bg-slate-900 rounded-lg p-4 mb-6" data-astro-cid-44xb4kzv> <code class="text-emerald-400 font-mono text-sm" data-astro-cid-44xb4kzv>npm install @holler2660/console-text</code> </div> <h3 class="text-xl font-semibold text-slate-900 mb-4" data-astro-cid-44xb4kzv>3. Initialize and use</h3> <!-- CommonJS Example --> <div class="mb-4" data-astro-cid-44xb4kzv> <div class="text-sm font-semibold text-slate-600 mb-2" data-astro-cid-44xb4kzv>CommonJS (Node.js)</div> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init } = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>"@holler2660/console-text"</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>"ct_live_your_key_here"</span><span class="text-slate-200" data-astro-cid-44xb4kzv> });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Now anywhere in your code:</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>"Payment processed!"</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> </div> </div> <!-- ESM Example --> <div class="mb-6" data-astro-cid-44xb4kzv> <div class="text-sm font-semibold text-slate-600 mb-2" data-astro-cid-44xb4kzv>ES Modules (TypeScript / Modern JS)</div> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>import</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init }</span> <span class="text-purple-400" data-astro-cid-44xb4kzv>from</span> <span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'ct_live_your_key_here'</span><span class="text-slate-200" data-astro-cid-44xb4kzv> });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Now anywhere in your code:</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Deployment successful!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> </div> </div> <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-6" data-astro-cid-44xb4kzv> <p class="text-sm text-emerald-800" data-astro-cid-44xb4kzv><strong data-astro-cid-44xb4kzv>✅ That's it!</strong> You'll receive an SMS within 5-10 seconds.</p> </div> </div> </section> <!-- API Reference --> <section id="api-reference" class="mb-16" data-astro-cid-44xb4kzv> <h2 class="text-3xl font-bold text-slate-900 mb-6" data-astro-cid-44xb4kzv>API Reference</h2> <!-- init() --> <div class="mb-12" data-astro-cid-44xb4kzv> <h3 class="text-2xl font-semibold text-slate-900 mb-4 font-mono" data-astro-cid-44xb4kzv>init(config)</h3> <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>Initialize the console.text() SDK. Call this once at the start of your application.</p> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Parameters</h4> <div class="border border-slate-200 rounded-lg overflow-hidden mb-6" data-astro-cid-44xb4kzv> <table class="w-full" data-astro-cid-44xb4kzv> <thead class="bg-slate-50" data-astro-cid-44xb4kzv> <tr data-astro-cid-44xb4kzv> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Parameter</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Type</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Required</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Description</th> </tr> </thead> <tbody class="divide-y divide-slate-200" data-astro-cid-44xb4kzv> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>apiKey</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>string</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>Yes</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Your API key (<code class="text-xs bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_live_*</code> or <code class="text-xs bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_test_*</code>)</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>timeout</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>number</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Request timeout in milliseconds (default: 5000)</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>retries</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>number</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Number of retry attempts (default: 2)</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>debug</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>boolean</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Enable debug logging (default: false)</td> </tr> </tbody> </table> </div> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Example</h4> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto mb-6" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>apiKey: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'ct_live_your_key_here'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>timeout: </span><span class="text-emerald-400" data-astro-cid-44xb4kzv>10000</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>retries: </span><span class="text-emerald-400" data-astro-cid-44xb4kzv>3</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>debug: </span><span class="text-purple-400" data-astro-cid-44xb4kzv>true</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- console.text() --> <div class="mb-12" data-astro-cid-44xb4kzv> <h3 class="text-2xl font-semibold text-slate-900 mb-4 font-mono" data-astro-cid-44xb4kzv>console.text(message, options?)</h3> <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>Send an SMS alert. Available after calling <code class="text-sm bg-slate-100 px-2 py-1 rounded" data-astro-cid-44xb4kzv>init()</code>.</p> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Parameters</h4> <div class="border border-slate-200 rounded-lg overflow-hidden mb-6" data-astro-cid-44xb4kzv> <table class="w-full" data-astro-cid-44xb4kzv> <thead class="bg-slate-50" data-astro-cid-44xb4kzv> <tr data-astro-cid-44xb4kzv> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Parameter</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Type</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Required</th> <th class="px-4 py-3 text-left text-sm font-semibold text-slate-900" data-astro-cid-44xb4kzv>Description</th> </tr> </thead> <tbody class="divide-y divide-slate-200" data-astro-cid-44xb4kzv> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>message</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>string</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>Yes</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Alert message (max 500 characters, auto-truncated)</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900" data-astro-cid-44xb4kzv>options</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>object</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Additional metadata and severity</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900 pl-8" data-astro-cid-44xb4kzv>└ metadata</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>object</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Custom data to attach to alert</td> </tr> <tr data-astro-cid-44xb4kzv> <td class="px-4 py-3 font-mono text-sm text-slate-900 pl-8" data-astro-cid-44xb4kzv>└ severity</td> <td class="px-4 py-3 text-sm text-slate-600" data-astro-cid-44xb4kzv>'info' | 'warning' | 'critical'</td> <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv><span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold" data-astro-cid-44xb4kzv>No</span></td> <td class="px-4 py-3 text-sm text-slate-700" data-astro-cid-44xb4kzv>Alert severity level</td> </tr> </tbody> </table> </div> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Examples</h4> <!-- Simple message --> <div class="mb-4" data-astro-cid-44xb4kzv> <div class="text-sm font-semibold text-slate-600 mb-2" data-astro-cid-44xb4kzv>Simple message</div> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm" data-astro-cid-44xb4kzv> <span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Deploy succeeded!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span> </div> </div> <!-- With metadata --> <div class="mb-4" data-astro-cid-44xb4kzv> <div class="text-sm font-semibold text-slate-600 mb-2" data-astro-cid-44xb4kzv>With metadata</div> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Payment failed'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>userId: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'123'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>amount: </span><span class="text-emerald-400" data-astro-cid-44xb4kzv>99.99</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>error: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Card declined'</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- With severity --> <div class="mb-6" data-astro-cid-44xb4kzv> <div class="text-sm font-semibold text-slate-600 mb-2" data-astro-cid-44xb4kzv>With severity</div> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Database down!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>severity: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'critical'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>metadata: { server: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'prod-1'</span><span class="text-slate-200" data-astro-cid-44xb4kzv> }</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> </div> <!-- Test vs Live Keys --> <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-200" data-astro-cid-44xb4kzv> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>🔑 Test vs Live Keys</h4> <div class="space-y-3 text-sm" data-astro-cid-44xb4kzv> <div class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 font-bold mt-0.5" data-astro-cid-44xb4kzv>✓</span> <div data-astro-cid-44xb4kzv> <code class="bg-white px-2 py-1 rounded text-xs font-mono" data-astro-cid-44xb4kzv>ct_test_*</code> <span class="text-slate-700 ml-2" data-astro-cid-44xb4kzv>Logs to console only, <strong data-astro-cid-44xb4kzv>no SMS sent</strong></span> </div> </div> <div class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 font-bold mt-0.5" data-astro-cid-44xb4kzv>✓</span> <div data-astro-cid-44xb4kzv> <code class="bg-white px-2 py-1 rounded text-xs font-mono" data-astro-cid-44xb4kzv>ct_live_*</code> <span class="text-slate-700 ml-2" data-astro-cid-44xb4kzv>Sends <strong data-astro-cid-44xb4kzv>real SMS</strong> to your phone</span> </div> </div> </div> </div> </section> <!-- Usage Examples --> <section id="examples" class="mb-16" data-astro-cid-44xb4kzv> <h2 class="text-3xl font-bold text-slate-900 mb-6" data-astro-cid-44xb4kzv>Usage Examples</h2> <!-- Express.js --> <div class="mb-8" data-astro-cid-44xb4kzv> <h3 class="text-xl font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Express.js API</h3> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>express = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'express'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init } = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>app = express();</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>app.post(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'/api/payment'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span><span class="text-purple-400" data-astro-cid-44xb4kzv>async</span><span class="text-slate-200" data-astro-cid-44xb4kzv> (req, res) => {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>try</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Process payment...</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Payment succeeded!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>} </span><span class="text-purple-400" data-astro-cid-44xb4kzv>catch</span><span class="text-slate-200" data-astro-cid-44xb4kzv> (error) {</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Payment failed'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, { error: error.message });</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- Next.js API Route --> <div class="mb-8" data-astro-cid-44xb4kzv> <h3 class="text-xl font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Next.js API Route</h3> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>import</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init }</span> <span class="text-purple-400" data-astro-cid-44xb4kzv>from</span> <span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>export default async function</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>handler(req, res) {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>if</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>(req.method === </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'POST'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>) {</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'New signup!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, { email: req.body.email });</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>res.status(</span><span class="text-emerald-400" data-astro-cid-44xb4kzv>200</span><span class="text-slate-200" data-astro-cid-44xb4kzv>).json({ success: true });</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> </div> </div> <!-- Cron Job --> <div class="mb-8" data-astro-cid-44xb4kzv> <h3 class="text-xl font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Cron Job</h3> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>cron = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'node-cron'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init } = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Run backup every night at 2am</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>cron.schedule(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'0 2 * * *'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span><span class="text-purple-400" data-astro-cid-44xb4kzv>async</span><span class="text-slate-200" data-astro-cid-44xb4kzv> () => {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>try</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>await</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>runBackup();</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Backup completed successfully'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>} </span><span class="text-purple-400" data-astro-cid-44xb4kzv>catch</span><span class="text-slate-200" data-astro-cid-44xb4kzv> (error) {</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Backup failed!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, { severity: &#39;critical&#39; });</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- Deployment Script --> <div class="mb-8" data-astro-cid-44xb4kzv> <h3 class="text-xl font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Deployment Script</h3> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init } = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>const</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ exec } = </span><span class="text-purple-400" data-astro-cid-44xb4kzv>require</span><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'child_process'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>exec(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'git push heroku main'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, (error, stdout) => {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>if</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>(error) {</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Deploy failed!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, { severity: &#39;critical&#39; });</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>} </span><span class="text-purple-400" data-astro-cid-44xb4kzv>else</span><span class="text-slate-200" data-astro-cid-44xb4kzv> {</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Deploy succeeded to production!'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- Serverless Function --> <div class="mb-8" data-astro-cid-44xb4kzv> <h3 class="text-xl font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Serverless Function (Vercel)</h3> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>import</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>{ init }</span> <span class="text-purple-400" data-astro-cid-44xb4kzv>from</span> <span class="text-amber-300" data-astro-cid-44xb4kzv>'@holler2660/console-text'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-purple-400" data-astro-cid-44xb4kzv>export default async function</span> <span class="text-slate-200" data-astro-cid-44xb4kzv>handler(req, res) {</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Process webhook...</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Stripe webhook received'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>type: req.body.type,</span></div> <div class="ml-8" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>amount: req.body.data.amount</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv></span>);</div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>res.status(</span><span class="text-emerald-400" data-astro-cid-44xb4kzv>200</span><span class="text-slate-200" data-astro-cid-44xb4kzv>).send(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'OK'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>}</span></div> </div> </div> <!-- Environment Variables --> <div class="bg-amber-50 border border-amber-200 rounded-lg p-6" data-astro-cid-44xb4kzv> <h4 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>💡 Best Practice: Environment Variables</h4> <p class="text-sm text-slate-700 mb-3" data-astro-cid-44xb4kzv>Never hardcode your API key! Use environment variables:</p> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm mb-3" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv># .env file</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>CONSOLE_TEXT_API_KEY=ct_live_your_key_here</span></div> </div> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// In your code</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span></div> </div> </div> </section> <!-- Rate Limiting --> <section id="rate-limiting" class="mb-16" data-astro-cid-44xb4kzv> <h2 class="text-3xl font-bold text-slate-900 mb-6" data-astro-cid-44xb4kzv>Rate Limiting</h2> <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>console.text() automatically prevents spam with built-in rate limiting.</p> <div class="bg-slate-50 rounded-xl p-6 mb-6" data-astro-cid-44xb4kzv> <h3 class="text-lg font-semibold text-slate-900 mb-4" data-astro-cid-44xb4kzv>How it works</h3> <ul class="space-y-3 text-slate-700" data-astro-cid-44xb4kzv> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv>•</span> <span data-astro-cid-44xb4kzv>Same message within <strong data-astro-cid-44xb4kzv>5 minutes</strong> = sent only once</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv>•</span> <span data-astro-cid-44xb4kzv>Different messages = each one sends</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv>•</span> <span data-astro-cid-44xb4kzv>Rate-limited messages are <strong data-astro-cid-44xb4kzv>logged but not sent</strong></span> </li> </ul> </div> <h3 class="text-lg font-semibold text-slate-900 mb-4" data-astro-cid-44xb4kzv>Bypassing Rate Limits</h3> <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>If you need to send the same message multiple times, add a timestamp or unique ID:</p> <div class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// ❌ Will be rate-limited</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Payment failed'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>'Payment failed'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>); </span><span class="text-slate-500" data-astro-cid-44xb4kzv>// Won't send</span></div> <div class="mt-4" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// ✅ Won't be rate-limited</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>console.text(</span><span class="text-amber-300" data-astro-cid-44xb4kzv>`Payment failed at $new Date().toISOString()`</span><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span></div> </div> </section> <!-- Troubleshooting --> <section id="troubleshooting" class="mb-16" data-astro-cid-44xb4kzv> <h2 class="text-3xl font-bold text-slate-900 mb-6" data-astro-cid-44xb4kzv>Troubleshooting</h2> <div class="space-y-6" data-astro-cid-44xb4kzv> <!-- Not receiving SMS --> <div class="border border-slate-200 rounded-lg p-6" data-astro-cid-44xb4kzv> <h3 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>SMS not received?</h3> <ul class="space-y-2 text-slate-700" data-astro-cid-44xb4kzv> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Check you're using a <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_live_*</code> key (not <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_test_*</code>)</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Verify your phone number is correct in your account</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Wait 5-10 seconds (delivery isn't instant)</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Check if message was rate-limited (same message within 5 min)</span> </li> </ul> </div> <!-- API errors --> <div class="border border-slate-200 rounded-lg p-6" data-astro-cid-44xb4kzv> <h3 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Getting API errors?</h3> <ul class="space-y-2 text-slate-700" data-astro-cid-44xb4kzv> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Enable debug mode: <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>init({ debug: true })</code></span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Check your API key format (must start with <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_live_</code> or <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>ct_test_</code>)</span> </li> <li class="flex items-start gap-3" data-astro-cid-44xb4kzv> <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv>✓</span> <span data-astro-cid-44xb4kzv>Verify you called <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>init()</code> before <code class="text-sm bg-slate-100 px-1 rounded" data-astro-cid-44xb4kzv>console.text()</code></span> </li> </ul> </div> <!-- Network issues --> <div class="border border-slate-200 rounded-lg p-6" data-astro-cid-44xb4kzv> <h3 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Network timeouts?</h3> <p class="text-slate-700 mb-3" data-astro-cid-44xb4kzv>Increase timeout and retries:</p> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>apiKey: </span><span class="text-amber-300" data-astro-cid-44xb4kzv>'ct_live_xxx'</span><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>timeout: </span><span class="text-emerald-400" data-astro-cid-44xb4kzv>10000</span><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span><span class="text-slate-500" data-astro-cid-44xb4kzv>// 10 seconds</span></div> <div class="ml-4" data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>retries: </span><span class="text-emerald-400" data-astro-cid-44xb4kzv>5</span></div> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>});</span></div> </div> </div> <!-- Silently failing --> <div class="border border-slate-200 rounded-lg p-6" data-astro-cid-44xb4kzv> <h3 class="text-lg font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Alerts failing silently?</h3> <p class="text-slate-700 mb-3" data-astro-cid-44xb4kzv>This is by design! Alerting should never crash your app. To debug:</p> <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv><span class="text-slate-200" data-astro-cid-44xb4kzv>init({ apiKey: &#39;ct_live_xxx&#39;, debug: true });</span></div> <div class="mt-2" data-astro-cid-44xb4kzv><span class="text-slate-500" data-astro-cid-44xb4kzv>// Now check console for error messages</span></div> </div> </div> </div> </section> <!-- Support --> <section class="bg-indigo-50 rounded-xl p-8 border border-indigo-200" data-astro-cid-44xb4kzv> <h2 class="text-2xl font-bold text-slate-900 mb-3" data-astro-cid-44xb4kzv>Need help?</h2> <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>Can't find what you're looking for? We're here to help!</p> <div class="flex flex-col sm:flex-row gap-3" data-astro-cid-44xb4kzv> <a href="mailto:consoletext.dev@gmail.com" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center" data-astro-cid-44xb4kzv>
-Email Support
-</a> <a href="/#try-now" class="px-6 py-3 bg-white border-2 border-indigo-600 text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-colors text-center" data-astro-cid-44xb4kzv>
-Try the Demo
-</a> </div> </section> </div> </main> <!-- Footer --> <footer class="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8" data-astro-cid-44xb4kzv> <div class="max-w-7xl mx-auto" data-astro-cid-44xb4kzv> <div class="grid md:grid-cols-3 gap-8 mb-8" data-astro-cid-44xb4kzv> <div data-astro-cid-44xb4kzv> <div class="text-white font-bold text-xl font-mono mb-4" data-astro-cid-44xb4kzv>console.text()</div> <p class="text-sm text-slate-400" data-astro-cid-44xb4kzv>One-line alerts for developers</p> </div> <div data-astro-cid-44xb4kzv> <h4 class="text-white font-semibold mb-4" data-astro-cid-44xb4kzv>Product</h4> <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv> <li data-astro-cid-44xb4kzv><a href="/docs" class="hover:text-white transition-colors" data-astro-cid-44xb4kzv>Documentation</a></li> <li data-astro-cid-44xb4kzv><a href="/#pricing" class="hover:text-white transition-colors" data-astro-cid-44xb4kzv>Pricing</a></li> <li data-astro-cid-44xb4kzv><a href="/#use-cases" class="hover:text-white transition-colors" data-astro-cid-44xb4kzv>Use Cases</a></li> </ul> </div> <div data-astro-cid-44xb4kzv> <h4 class="text-white font-semibold mb-4" data-astro-cid-44xb4kzv>Contact</h4> <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv> <li data-astro-cid-44xb4kzv><a href="mailto:consoletext.dev@gmail.com" class="hover:text-white transition-colors" data-astro-cid-44xb4kzv>consoletext.dev@gmail.com</a></li> </ul> </div> </div> <div class="border-t border-slate-800 pt-8 text-sm text-slate-400 text-center" data-astro-cid-44xb4kzv> <p data-astro-cid-44xb4kzv>© 2025 console.text() • Building in public. All feedback welcome.</p> </div> </div> </footer> <script type="module">document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(r){r.preventDefault();const e=document.querySelector(this.getAttribute("href"));e&&e.scrollIntoView({behavior:"smooth",block:"start"})})});</script>  </body> </html>
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-44xb4kzv>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v5.16.5" />
+    <!-- SEO Meta Tags -->
+    <title>Documentation - console.text()</title>
+    <meta
+      name="description"
+      content="Complete documentation for console.text() - Send SMS alerts from your code in one line."
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../_astro/docs.Br0_Z6ge.css" />
+    <style>
+      [data-astro-cid-44xb4kzv]::-webkit-scrollbar {
+        width: 10px;
+      }
+      [data-astro-cid-44xb4kzv]::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      [data-astro-cid-44xb4kzv]::-webkit-scrollbar-thumb {
+        background: #64748b;
+        border-radius: 5px;
+      }
+      [data-astro-cid-44xb4kzv]::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+      }
+      code[data-astro-cid-44xb4kzv],
+      pre[data-astro-cid-44xb4kzv],
+      .font-mono[data-astro-cid-44xb4kzv] {
+        font-family: Fira Code, Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans antialiased bg-white text-slate-900"
+    data-astro-cid-44xb4kzv
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50"
+      data-astro-cid-44xb4kzv
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        data-astro-cid-44xb4kzv
+      >
+        <div
+          class="flex items-center justify-between h-16"
+          data-astro-cid-44xb4kzv
+        >
+          <div class="flex items-center" data-astro-cid-44xb4kzv>
+            <a
+              href="/"
+              class="text-2xl font-bold text-slate-900"
+              data-astro-cid-44xb4kzv
+            >
+              <span class="font-mono" data-astro-cid-44xb4kzv
+                >console.text()</span
+              >
+            </a>
+          </div>
+          <div
+            class="hidden md:flex items-center space-x-8"
+            data-astro-cid-44xb4kzv
+          >
+            <a
+              href="/docs"
+              class="text-indigo-600 font-semibold"
+              data-astro-cid-44xb4kzv
+              >Docs</a
+            >
+            <a
+              href="/#pricing"
+              class="text-slate-600 hover:text-slate-900 transition-colors"
+              data-astro-cid-44xb4kzv
+              >Pricing</a
+            >
+            <a
+              href="/#use-cases"
+              class="text-slate-600 hover:text-slate-900 transition-colors"
+              data-astro-cid-44xb4kzv
+              >Use Cases</a
+            >
+            <a
+              href="/#try-now"
+              class="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              data-astro-cid-44xb4kzv
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Documentation Content -->
+    <main class="pt-24 pb-16" data-astro-cid-44xb4kzv>
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+        data-astro-cid-44xb4kzv
+      >
+        <!-- Page Header -->
+        <div class="mb-12" data-astro-cid-44xb4kzv>
+          <h1
+            class="text-5xl font-bold text-slate-900 mb-4"
+            data-astro-cid-44xb4kzv
+          >
+            Documentation
+          </h1>
+          <p class="text-xl text-slate-600" data-astro-cid-44xb4kzv>
+            Everything you need to integrate console.text() in 30 seconds.
+          </p>
+        </div>
+        <!-- Quick Navigation -->
+        <div class="bg-slate-50 rounded-xl p-6 mb-12" data-astro-cid-44xb4kzv>
+          <h3 class="font-semibold text-slate-900 mb-3" data-astro-cid-44xb4kzv>
+            On this page
+          </h3>
+          <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv>
+            <li data-astro-cid-44xb4kzv>
+              <a
+                href="#quick-start"
+                class="text-indigo-600 hover:text-indigo-700"
+                data-astro-cid-44xb4kzv
+                >Quick Start</a
+              >
+            </li>
+            <li data-astro-cid-44xb4kzv>
+              <a
+                href="#api-reference"
+                class="text-indigo-600 hover:text-indigo-700"
+                data-astro-cid-44xb4kzv
+                >API Reference</a
+              >
+            </li>
+            <li data-astro-cid-44xb4kzv>
+              <a
+                href="#examples"
+                class="text-indigo-600 hover:text-indigo-700"
+                data-astro-cid-44xb4kzv
+                >Usage Examples</a
+              >
+            </li>
+            <li data-astro-cid-44xb4kzv>
+              <a
+                href="#troubleshooting"
+                class="text-indigo-600 hover:text-indigo-700"
+                data-astro-cid-44xb4kzv
+                >Troubleshooting</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Quick Start -->
+        <section id="quick-start" class="mb-16" data-astro-cid-44xb4kzv>
+          <h2
+            class="text-3xl font-bold text-slate-900 mb-6"
+            data-astro-cid-44xb4kzv
+          >
+            Quick Start
+          </h2>
+          <div class="prose prose-slate max-w-none" data-astro-cid-44xb4kzv>
+            <p class="text-lg text-slate-700 mb-6" data-astro-cid-44xb4kzv>
+              Get your first SMS alert working in 30 seconds.
+            </p>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-4"
+              data-astro-cid-44xb4kzv
+            >
+              1. Get your API key
+            </h3>
+            <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>
+              Visit the
+              <a
+                href="/#try-now"
+                class="text-indigo-600 hover:text-indigo-700"
+                data-astro-cid-44xb4kzv
+                >homepage</a
+              >
+              and enter your email and phone number to generate your API keys
+              instantly.
+            </p>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-4 mt-8"
+              data-astro-cid-44xb4kzv
+            >
+              2. Install the package
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-4 mb-6"
+              data-astro-cid-44xb4kzv
+            >
+              <code
+                class="text-emerald-400 font-mono text-sm"
+                data-astro-cid-44xb4kzv
+                >npm install @holler2660/console-text</code
+              >
+            </div>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-4"
+              data-astro-cid-44xb4kzv
+            >
+              3. Initialize and use
+            </h3>
+            <!-- CommonJS Example -->
+            <div class="mb-4" data-astro-cid-44xb4kzv>
+              <div
+                class="text-sm font-semibold text-slate-600 mb-2"
+                data-astro-cid-44xb4kzv
+              >
+                CommonJS (Node.js)
+              </div>
+              <div
+                class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-purple-400" data-astro-cid-44xb4kzv
+                    >const</span
+                  >
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >{ init } = </span
+                  ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                    >require</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >"@holler2660/console-text"</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >);</span
+                  >
+                </div>
+                <div class="mt-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >init({ apiKey: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >"ct_live_your_key_here"</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                    });</span
+                  >
+                </div>
+                <div class="mt-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-500" data-astro-cid-44xb4kzv
+                    >// Now anywhere in your code:</span
+                  >
+                </div>
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >console.text(</span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >"Payment processed!"</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >);</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- ESM Example -->
+            <div class="mb-6" data-astro-cid-44xb4kzv>
+              <div
+                class="text-sm font-semibold text-slate-600 mb-2"
+                data-astro-cid-44xb4kzv
+              >
+                ES Modules (TypeScript / Modern JS)
+              </div>
+              <div
+                class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-purple-400" data-astro-cid-44xb4kzv
+                    >import</span
+                  >
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >{ init }</span
+                  >
+                  <span class="text-purple-400" data-astro-cid-44xb4kzv
+                    >from</span
+                  >
+                  <span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'@holler2660/console-text'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span>
+                </div>
+                <div class="mt-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >init({ apiKey: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'ct_live_your_key_here'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                    });</span
+                  >
+                </div>
+                <div class="mt-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-500" data-astro-cid-44xb4kzv
+                    >// Now anywhere in your code:</span
+                  >
+                </div>
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >console.text(</span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'Deployment successful!'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >);</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-6"
+              data-astro-cid-44xb4kzv
+            >
+              <p class="text-sm text-emerald-800" data-astro-cid-44xb4kzv>
+                <strong data-astro-cid-44xb4kzv>✅ That's it!</strong> You'll
+                receive an SMS within 5-10 seconds.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- API Reference -->
+        <section id="api-reference" class="mb-16" data-astro-cid-44xb4kzv>
+          <h2
+            class="text-3xl font-bold text-slate-900 mb-6"
+            data-astro-cid-44xb4kzv
+          >
+            API Reference
+          </h2>
+          <!-- init() -->
+          <div class="mb-12" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-2xl font-semibold text-slate-900 mb-4 font-mono"
+              data-astro-cid-44xb4kzv
+            >
+              init(config)
+            </h3>
+            <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>
+              Initialize the console.text() SDK. Call this once at the start of
+              your application.
+            </p>
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Parameters
+            </h4>
+            <div
+              class="border border-slate-200 rounded-lg overflow-hidden mb-6"
+              data-astro-cid-44xb4kzv
+            >
+              <table class="w-full" data-astro-cid-44xb4kzv>
+                <thead class="bg-slate-50" data-astro-cid-44xb4kzv>
+                  <tr data-astro-cid-44xb4kzv>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Parameter
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Type
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Required
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-slate-200"
+                  data-astro-cid-44xb4kzv
+                >
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      apiKey
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      string
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >Yes</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Your API key (<code
+                        class="text-xs bg-slate-100 px-1 rounded"
+                        data-astro-cid-44xb4kzv
+                        >ct_live_*</code
+                      >
+                      or
+                      <code
+                        class="text-xs bg-slate-100 px-1 rounded"
+                        data-astro-cid-44xb4kzv
+                        >ct_test_*</code
+                      >)
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      timeout
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      number
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Request timeout in milliseconds (default: 5000)
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      retries
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      number
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Number of retry attempts (default: 2)
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      debug
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      boolean
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Enable debug logging (default: false)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Example
+            </h4>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto mb-6"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >apiKey: </span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'ct_live_your_key_here'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >timeout: </span
+                ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                  >10000</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >retries: </span
+                ><span class="text-emerald-400" data-astro-cid-44xb4kzv>3</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >debug: </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >true</span
+                >
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>});</span>
+              </div>
+            </div>
+          </div>
+          <!-- console.text() -->
+          <div class="mb-12" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-2xl font-semibold text-slate-900 mb-4 font-mono"
+              data-astro-cid-44xb4kzv
+            >
+              console.text(message, options?)
+            </h3>
+            <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>
+              Send an SMS alert. Available after calling
+              <code
+                class="text-sm bg-slate-100 px-2 py-1 rounded"
+                data-astro-cid-44xb4kzv
+                >init()</code
+              >.
+            </p>
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Parameters
+            </h4>
+            <div
+              class="border border-slate-200 rounded-lg overflow-hidden mb-6"
+              data-astro-cid-44xb4kzv
+            >
+              <table class="w-full" data-astro-cid-44xb4kzv>
+                <thead class="bg-slate-50" data-astro-cid-44xb4kzv>
+                  <tr data-astro-cid-44xb4kzv>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Parameter
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Type
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Required
+                    </th>
+                    <th
+                      class="px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-slate-200"
+                  data-astro-cid-44xb4kzv
+                >
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      message
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      string
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >Yes</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Alert message (max 500 characters, auto-truncated)
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900"
+                      data-astro-cid-44xb4kzv
+                    >
+                      options
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      object
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Additional metadata and severity
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900 pl-8"
+                      data-astro-cid-44xb4kzv
+                    >
+                      └ metadata
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      object
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Custom data to attach to alert
+                    </td>
+                  </tr>
+                  <tr data-astro-cid-44xb4kzv>
+                    <td
+                      class="px-4 py-3 font-mono text-sm text-slate-900 pl-8"
+                      data-astro-cid-44xb4kzv
+                    >
+                      └ severity
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-600"
+                      data-astro-cid-44xb4kzv
+                    >
+                      'info' | 'warning' | 'critical'
+                    </td>
+                    <td class="px-4 py-3 text-sm" data-astro-cid-44xb4kzv>
+                      <span
+                        class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs font-semibold"
+                        data-astro-cid-44xb4kzv
+                        >No</span
+                      >
+                    </td>
+                    <td
+                      class="px-4 py-3 text-sm text-slate-700"
+                      data-astro-cid-44xb4kzv
+                    >
+                      Alert severity level
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Examples
+            </h4>
+            <!-- Simple message -->
+            <div class="mb-4" data-astro-cid-44xb4kzv>
+              <div
+                class="text-sm font-semibold text-slate-600 mb-2"
+                data-astro-cid-44xb4kzv
+              >
+                Simple message
+              </div>
+              <div
+                class="bg-slate-900 rounded-lg p-4 font-mono text-sm"
+                data-astro-cid-44xb4kzv
+              >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Deploy succeeded!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+            </div>
+            <!-- With metadata -->
+            <div class="mb-4" data-astro-cid-44xb4kzv>
+              <div
+                class="text-sm font-semibold text-slate-600 mb-2"
+                data-astro-cid-44xb4kzv
+              >
+                With metadata
+              </div>
+              <div
+                class="bg-slate-900 rounded-lg p-4 font-mono text-sm overflow-x-auto"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >console.text(</span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'Payment failed'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >, {</span
+                  >
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >userId: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'123'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >amount: </span
+                  ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                    >99.99</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >error: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'Card declined'</span
+                  >
+                </div>
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >});</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- With severity -->
+            <div class="mb-6" data-astro-cid-44xb4kzv>
+              <div
+                class="text-sm font-semibold text-slate-600 mb-2"
+                data-astro-cid-44xb4kzv
+              >
+                With severity
+              </div>
+              <div
+                class="bg-slate-900 rounded-lg p-4 font-mono text-sm overflow-x-auto"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >console.text(</span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'Database down!'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >, {</span
+                  >
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >severity: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'critical'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >metadata: { server: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'prod-1'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                    }</span
+                  >
+                </div>
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >});</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Test vs Live Keys -->
+          <div
+            class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-200"
+            data-astro-cid-44xb4kzv
+          >
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              🔑 Test vs Live Keys
+            </h4>
+            <div class="space-y-3 text-sm" data-astro-cid-44xb4kzv>
+              <div class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                <span
+                  class="text-emerald-500 font-bold mt-0.5"
+                  data-astro-cid-44xb4kzv
+                  >✓</span
+                >
+                <div data-astro-cid-44xb4kzv>
+                  <code
+                    class="bg-white px-2 py-1 rounded text-xs font-mono"
+                    data-astro-cid-44xb4kzv
+                    >ct_test_*</code
+                  >
+                  <span class="text-slate-700 ml-2" data-astro-cid-44xb4kzv
+                    >Logs to console only,
+                    <strong data-astro-cid-44xb4kzv>no SMS sent</strong></span
+                  >
+                </div>
+              </div>
+              <div class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                <span
+                  class="text-emerald-500 font-bold mt-0.5"
+                  data-astro-cid-44xb4kzv
+                  >✓</span
+                >
+                <div data-astro-cid-44xb4kzv>
+                  <code
+                    class="bg-white px-2 py-1 rounded text-xs font-mono"
+                    data-astro-cid-44xb4kzv
+                    >ct_live_*</code
+                  >
+                  <span class="text-slate-700 ml-2" data-astro-cid-44xb4kzv
+                    >Sends <strong data-astro-cid-44xb4kzv>real SMS</strong> to
+                    your phone</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Usage Examples -->
+        <section id="examples" class="mb-16" data-astro-cid-44xb4kzv>
+          <h2
+            class="text-3xl font-bold text-slate-900 mb-6"
+            data-astro-cid-44xb4kzv
+          >
+            Usage Examples
+          </h2>
+          <!-- Express.js -->
+          <div class="mb-8" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Express.js API
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >express = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'express'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ init } = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'@holler2660/console-text'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >app = express();</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >app.post(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'/api/payment'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >async</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                  (req, res) => {</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv>try</span>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>{</span>
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-500" data-astro-cid-44xb4kzv
+                  >// Process payment...</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Payment succeeded!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>} </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >catch</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                  (error) {</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Payment failed'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >, { error: error.message });</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>});</span>
+              </div>
+            </div>
+          </div>
+          <!-- Next.js API Route -->
+          <div class="mb-8" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Next.js API Route
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >import</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ init }</span
+                >
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >from</span
+                >
+                <span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'@holler2660/console-text'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span>
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >export default async function</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >handler(req, res) {</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv>if</span>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >(req.method === </span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'POST'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>) {</span>
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'New signup!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >, { email: req.body.email });</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >res.status(</span
+                ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                  >200</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >).json({ success: true });</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+            </div>
+          </div>
+          <!-- Cron Job -->
+          <div class="mb-8" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Cron Job
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >cron = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'node-cron'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ init } = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'@holler2660/console-text'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-500" data-astro-cid-44xb4kzv
+                  >// Run backup every night at 2am</span
+                >
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >cron.schedule(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'0 2 * * *'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >async</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                  () => {</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv>try</span>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>{</span>
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >await</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >runBackup();</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Backup completed successfully'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>} </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >catch</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>
+                  (error) {</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Backup failed!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >, { severity: &#39;critical&#39; });</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>});</span>
+              </div>
+            </div>
+          </div>
+          <!-- Deployment Script -->
+          <div class="mb-8" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Deployment Script
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ init } = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'@holler2660/console-text'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >const</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ exec } = </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >require</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'child_process'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>exec(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'git push heroku main'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >, (error, stdout) => {</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv>if</span>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >(error) {</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Deploy failed!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >, { severity: &#39;critical&#39; });</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>} </span
+                ><span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >else</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv> {</span>
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Deploy succeeded to production!'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>});</span>
+              </div>
+            </div>
+          </div>
+          <!-- Serverless Function -->
+          <div class="mb-8" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-xl font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              Serverless Function (Vercel)
+            </h3>
+            <div
+              class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >import</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >{ init }</span
+                >
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >from</span
+                >
+                <span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'@holler2660/console-text'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>;</span>
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+              <div class="mt-4" data-astro-cid-44xb4kzv>
+                <span class="text-purple-400" data-astro-cid-44xb4kzv
+                  >export default async function</span
+                >
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >handler(req, res) {</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-500" data-astro-cid-44xb4kzv
+                  >// Process webhook...</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >console.text(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                  >'Stripe webhook received'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span>
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >type: req.body.type,</span
+                >
+              </div>
+              <div class="ml-8" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >amount: req.body.data.amount</span
+                >
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv></span>);
+              </div>
+              <div class="ml-4" data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >res.status(</span
+                ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                  >200</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >).send(</span
+                ><span class="text-amber-300" data-astro-cid-44xb4kzv>'OK'</span
+                ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv>}</span>
+              </div>
+            </div>
+          </div>
+          <!-- Environment Variables -->
+          <div
+            class="bg-amber-50 border border-amber-200 rounded-lg p-6"
+            data-astro-cid-44xb4kzv
+          >
+            <h4
+              class="text-lg font-semibold text-slate-900 mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              💡 Best Practice: Environment Variables
+            </h4>
+            <p class="text-sm text-slate-700 mb-3" data-astro-cid-44xb4kzv>
+              Never hardcode your API key! Use environment variables:
+            </p>
+            <div
+              class="bg-slate-900 rounded-lg p-4 font-mono text-sm mb-3"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-500" data-astro-cid-44xb4kzv
+                  ># .env file</span
+                >
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >CONSOLE_TEXT_API_KEY=ct_live_your_key_here</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-slate-900 rounded-lg p-4 font-mono text-sm"
+              data-astro-cid-44xb4kzv
+            >
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-500" data-astro-cid-44xb4kzv
+                  >// In your code</span
+                >
+              </div>
+              <div data-astro-cid-44xb4kzv>
+                <span class="text-slate-200" data-astro-cid-44xb4kzv
+                  >init({ apiKey: process.env.CONSOLE_TEXT_API_KEY });</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Rate Limiting -->
+        <section id="rate-limiting" class="mb-16" data-astro-cid-44xb4kzv>
+          <h2
+            class="text-3xl font-bold text-slate-900 mb-6"
+            data-astro-cid-44xb4kzv
+          >
+            Rate Limiting
+          </h2>
+          <p class="text-slate-700 mb-6" data-astro-cid-44xb4kzv>
+            console.text() automatically prevents spam with built-in rate
+            limiting.
+          </p>
+          <div class="bg-slate-50 rounded-xl p-6 mb-6" data-astro-cid-44xb4kzv>
+            <h3
+              class="text-lg font-semibold text-slate-900 mb-4"
+              data-astro-cid-44xb4kzv
+            >
+              How it works
+            </h3>
+            <ul class="space-y-3 text-slate-700" data-astro-cid-44xb4kzv>
+              <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv
+                  >•</span
+                >
+                <span data-astro-cid-44xb4kzv
+                  >Same message within
+                  <strong data-astro-cid-44xb4kzv>5 minutes</strong> = sent only
+                  once</span
+                >
+              </li>
+              <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv
+                  >•</span
+                >
+                <span data-astro-cid-44xb4kzv
+                  >Different messages = each one sends</span
+                >
+              </li>
+              <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                <span class="text-indigo-600 mt-1" data-astro-cid-44xb4kzv
+                  >•</span
+                >
+                <span data-astro-cid-44xb4kzv
+                  >Rate-limited messages are
+                  <strong data-astro-cid-44xb4kzv
+                    >logged but not sent</strong
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+          <h3
+            class="text-lg font-semibold text-slate-900 mb-4"
+            data-astro-cid-44xb4kzv
+          >
+            Bypassing Rate Limits
+          </h3>
+          <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>
+            If you need to send the same message multiple times, add a timestamp
+            or unique ID:
+          </p>
+          <div
+            class="bg-slate-900 rounded-lg p-6 font-mono text-sm overflow-x-auto"
+            data-astro-cid-44xb4kzv
+          >
+            <div data-astro-cid-44xb4kzv>
+              <span class="text-slate-500" data-astro-cid-44xb4kzv
+                >// ❌ Will be rate-limited</span
+              >
+            </div>
+            <div data-astro-cid-44xb4kzv>
+              <span class="text-slate-200" data-astro-cid-44xb4kzv
+                >console.text(</span
+              ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                >'Payment failed'</span
+              ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+            </div>
+            <div data-astro-cid-44xb4kzv>
+              <span class="text-slate-200" data-astro-cid-44xb4kzv
+                >console.text(</span
+              ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                >'Payment failed'</span
+              ><span class="text-slate-200" data-astro-cid-44xb4kzv>); </span
+              ><span class="text-slate-500" data-astro-cid-44xb4kzv
+                >// Won't send</span
+              >
+            </div>
+            <div class="mt-4" data-astro-cid-44xb4kzv>
+              <span class="text-slate-500" data-astro-cid-44xb4kzv
+                >// ✅ Won't be rate-limited</span
+              >
+            </div>
+            <div data-astro-cid-44xb4kzv>
+              <span class="text-slate-200" data-astro-cid-44xb4kzv
+                >console.text(</span
+              ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                >`Payment failed at $new Date().toISOString()`</span
+              ><span class="text-slate-200" data-astro-cid-44xb4kzv>);</span>
+            </div>
+          </div>
+        </section>
+        <!-- Troubleshooting -->
+        <section id="troubleshooting" class="mb-16" data-astro-cid-44xb4kzv>
+          <h2
+            class="text-3xl font-bold text-slate-900 mb-6"
+            data-astro-cid-44xb4kzv
+          >
+            Troubleshooting
+          </h2>
+          <div class="space-y-6" data-astro-cid-44xb4kzv>
+            <!-- Not receiving SMS -->
+            <div
+              class="border border-slate-200 rounded-lg p-6"
+              data-astro-cid-44xb4kzv
+            >
+              <h3
+                class="text-lg font-semibold text-slate-900 mb-3"
+                data-astro-cid-44xb4kzv
+              >
+                SMS not received?
+              </h3>
+              <ul class="space-y-2 text-slate-700" data-astro-cid-44xb4kzv>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Check you're using a
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >ct_live_*</code
+                    >
+                    key (not
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >ct_test_*</code
+                    >)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Verify your phone number is correct in your account</span
+                  >
+                </li>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Wait 5-10 seconds (delivery isn't instant)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Check if message was rate-limited (same message within 5
+                    min)</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- API errors -->
+            <div
+              class="border border-slate-200 rounded-lg p-6"
+              data-astro-cid-44xb4kzv
+            >
+              <h3
+                class="text-lg font-semibold text-slate-900 mb-3"
+                data-astro-cid-44xb4kzv
+              >
+                Getting API errors?
+              </h3>
+              <ul class="space-y-2 text-slate-700" data-astro-cid-44xb4kzv>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Enable debug mode:
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >init({ debug: true })</code
+                    ></span
+                  >
+                </li>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Check your API key format (must start with
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >ct_live_</code
+                    >
+                    or
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >ct_test_</code
+                    >)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3" data-astro-cid-44xb4kzv>
+                  <span class="text-emerald-500 mt-1" data-astro-cid-44xb4kzv
+                    >✓</span
+                  >
+                  <span data-astro-cid-44xb4kzv
+                    >Verify you called
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >init()</code
+                    >
+                    before
+                    <code
+                      class="text-sm bg-slate-100 px-1 rounded"
+                      data-astro-cid-44xb4kzv
+                      >console.text()</code
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Network issues -->
+            <div
+              class="border border-slate-200 rounded-lg p-6"
+              data-astro-cid-44xb4kzv
+            >
+              <h3
+                class="text-lg font-semibold text-slate-900 mb-3"
+                data-astro-cid-44xb4kzv
+              >
+                Network timeouts?
+              </h3>
+              <p class="text-slate-700 mb-3" data-astro-cid-44xb4kzv>
+                Increase timeout and retries:
+              </p>
+              <div
+                class="bg-slate-900 rounded-lg p-4 font-mono text-sm"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >init({</span
+                  >
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >apiKey: </span
+                  ><span class="text-amber-300" data-astro-cid-44xb4kzv
+                    >'ct_live_xxx'</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>,</span>
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >timeout: </span
+                  ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                    >10000</span
+                  ><span class="text-slate-200" data-astro-cid-44xb4kzv>, </span
+                  ><span class="text-slate-500" data-astro-cid-44xb4kzv
+                    >// 10 seconds</span
+                  >
+                </div>
+                <div class="ml-4" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >retries: </span
+                  ><span class="text-emerald-400" data-astro-cid-44xb4kzv
+                    >5</span
+                  >
+                </div>
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >});</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Silently failing -->
+            <div
+              class="border border-slate-200 rounded-lg p-6"
+              data-astro-cid-44xb4kzv
+            >
+              <h3
+                class="text-lg font-semibold text-slate-900 mb-3"
+                data-astro-cid-44xb4kzv
+              >
+                Alerts failing silently?
+              </h3>
+              <p class="text-slate-700 mb-3" data-astro-cid-44xb4kzv>
+                This is by design! Alerting should never crash your app. To
+                debug:
+              </p>
+              <div
+                class="bg-slate-900 rounded-lg p-4 font-mono text-sm"
+                data-astro-cid-44xb4kzv
+              >
+                <div data-astro-cid-44xb4kzv>
+                  <span class="text-slate-200" data-astro-cid-44xb4kzv
+                    >init({ apiKey: &#39;ct_live_xxx&#39;, debug: true });</span
+                  >
+                </div>
+                <div class="mt-2" data-astro-cid-44xb4kzv>
+                  <span class="text-slate-500" data-astro-cid-44xb4kzv
+                    >// Now check console for error messages</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Support -->
+        <section
+          class="bg-indigo-50 rounded-xl p-8 border border-indigo-200"
+          data-astro-cid-44xb4kzv
+        >
+          <h2
+            class="text-2xl font-bold text-slate-900 mb-3"
+            data-astro-cid-44xb4kzv
+          >
+            Need help?
+          </h2>
+          <p class="text-slate-700 mb-4" data-astro-cid-44xb4kzv>
+            Can't find what you're looking for? We're here to help!
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3" data-astro-cid-44xb4kzv>
+            <a
+              href="mailto:consoletext.dev@gmail.com"
+              class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center"
+              data-astro-cid-44xb4kzv
+            >
+              Email Support
+            </a>
+            <a
+              href="/#try-now"
+              class="px-6 py-3 bg-white border-2 border-indigo-600 text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-colors text-center"
+              data-astro-cid-44xb4kzv
+            >
+              Try the Demo
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8"
+      data-astro-cid-44xb4kzv
+    >
+      <div class="max-w-7xl mx-auto" data-astro-cid-44xb4kzv>
+        <div class="grid md:grid-cols-3 gap-8 mb-8" data-astro-cid-44xb4kzv>
+          <div data-astro-cid-44xb4kzv>
+            <div
+              class="text-white font-bold text-xl font-mono mb-4"
+              data-astro-cid-44xb4kzv
+            >
+              console.text()
+            </div>
+            <p class="text-sm text-slate-400" data-astro-cid-44xb4kzv>
+              One-line alerts for developers
+            </p>
+          </div>
+          <div data-astro-cid-44xb4kzv>
+            <h4 class="text-white font-semibold mb-4" data-astro-cid-44xb4kzv>
+              Product
+            </h4>
+            <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv>
+              <li data-astro-cid-44xb4kzv>
+                <a
+                  href="/docs"
+                  class="hover:text-white transition-colors"
+                  data-astro-cid-44xb4kzv
+                  >Documentation</a
+                >
+              </li>
+              <li data-astro-cid-44xb4kzv>
+                <a
+                  href="/#pricing"
+                  class="hover:text-white transition-colors"
+                  data-astro-cid-44xb4kzv
+                  >Pricing</a
+                >
+              </li>
+              <li data-astro-cid-44xb4kzv>
+                <a
+                  href="/#use-cases"
+                  class="hover:text-white transition-colors"
+                  data-astro-cid-44xb4kzv
+                  >Use Cases</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div data-astro-cid-44xb4kzv>
+            <h4 class="text-white font-semibold mb-4" data-astro-cid-44xb4kzv>
+              Contact
+            </h4>
+            <ul class="space-y-2 text-sm" data-astro-cid-44xb4kzv>
+              <li data-astro-cid-44xb4kzv>
+                <a
+                  href="mailto:consoletext.dev@gmail.com"
+                  class="hover:text-white transition-colors"
+                  data-astro-cid-44xb4kzv
+                  >consoletext.dev@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-800 pt-8 text-sm text-slate-400 text-center"
+          data-astro-cid-44xb4kzv
+        >
+          <p data-astro-cid-44xb4kzv>
+            © 2025 console.text() • Building in public. All feedback welcome.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module">
+      document.querySelectorAll('a[href^="#"]').forEach((t) => {
+        t.addEventListener("click", function (r) {
+          r.preventDefault();
+          const e = document.querySelector(this.getAttribute("href"));
+          e && e.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>
