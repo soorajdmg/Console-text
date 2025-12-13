@@ -1,0 +1,23 @@
+const y=document.getElementById("mobile-menu-button"),p=document.getElementById("mobile-menu");y?.addEventListener("click",()=>{p?.classList.toggle("hidden")});const v=document.getElementById("watch-demo-btn"),d=document.getElementById("video-modal"),h=document.getElementById("close-modal"),u=document.getElementById("modal-video");v?.addEventListener("click",()=>{d?.classList.remove("hidden"),u.play()});h?.addEventListener("click",()=>{d?.classList.add("hidden"),u.pause()});d?.addEventListener("click",e=>{e.target===d&&(d.classList.add("hidden"),u.pause())});window.copyToClipboard=function(e){const n=document.getElementById(e),t=n?.textContent||"";navigator.clipboard.writeText(t).then(()=>{const o=n?.nextElementSibling,s=o?.textContent;o&&(o.textContent="Copied!",setTimeout(()=>{o.textContent=s},2e3))})};const b=document.getElementById("generate-key-form"),f=document.getElementById("key-generation-form"),E=document.getElementById("api-keys-display"),I=document.getElementById("phone");I?.addEventListener("input",e=>{const n=e.target.value,t=/^\+[1-9]\d{1,14}$/;n.length>0&&!t.test(n)?e.target.setCustomValidity("Phone must start with + followed by country code and number (e.g., +15551234567)"):e.target.setCustomValidity("")});b?.addEventListener("submit",async e=>{e.preventDefault();const n=document.getElementById("email").value,t=document.getElementById("phone").value;if(!/^\+[1-9]\d{1,14}$/.test(t)){alert(`Invalid phone number format.
+
+Please use E.164 format:
++CountryCode followed by number
+
+Examples:
++15551234567 (US)
++447911123456 (UK)
++917306761456 (India)`);return}const s=e.target.querySelector('button[type="submit"]');s.disabled=!0,s.textContent="Generating...";try{const a=await fetch("https://api-production-298e.up.railway.app/v1/signup",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:n,phone:t})});if(!a.ok){const r=await a.json();let c=r.message||"Failed to generate API keys";throw r.details&&(Array.isArray(r.details)?c=`Validation errors:
+${r.details.map(g=>`${g.path?.join(".")||"field"}: ${g.message}`).join(`
+`)}`:typeof r.details=="string"&&(c=r.details)),new Error(c)}const l=await a.json();document.getElementById("test-key").textContent=l.apiKeys.test,document.getElementById("live-key").textContent=l.apiKeys.live,sessionStorage.setItem("apiKey",l.apiKeys.live),f?.classList.add("hidden"),E?.classList.remove("hidden")}catch(i){const a=i.message||"Error generating API keys. Please try again.";alert(a),console.error("Signup error:",i)}finally{s.disabled=!1,s.textContent="Generate API Keys"}});const x=document.getElementById("send-sms-form"),m=document.getElementById("send-result");x?.addEventListener("submit",async e=>{e.preventDefault();const n=document.getElementById("message").value,t=sessionStorage.getItem("apiKey");if(!t){m.innerHTML='<div class="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">Please generate API keys first</div>';return}const o=e.target.querySelector('button[type="submit"]');o.disabled=!0,o.textContent="Sending...";try{if(!(await fetch("https://api-production-298e.up.railway.app/v1/alert",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${t}`},body:JSON.stringify({message:n,metadata:{source:"website-demo"}})})).ok)throw new Error("Failed to send SMS");m.innerHTML=`
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <div>
+                                <div class="font-semibold text-emerald-700 mb-1">Message sent!</div>
+                                <div class="text-sm text-emerald-600">Check your phone in 5-10 seconds.</div>
+                            </div>
+                        </div>
+                    </div>
+                `,document.getElementById("message").value=""}catch(s){m.innerHTML='<div class="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">Error sending message. Please try again.</div>',console.error(s)}finally{o.disabled=!1,o.textContent="Send Test SMS"}});document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(n){n.preventDefault();const t=document.querySelector(this.getAttribute("href"));t&&t.scrollIntoView({behavior:"smooth",block:"start"})})});
